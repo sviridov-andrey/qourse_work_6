@@ -1,0 +1,22 @@
+{% extends 'mailing/base.html' %}
+
+
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="cart-body">
+                <div class="card-body">
+                    <h3 class="card-title"> клиент: {{ object.fio }}</h3>
+                </div>
+                <div class="card-footer">
+                    <div class=" mb-2"> почта: {{ object.email }}</div>
+                    <a href="{% url 'mailing:client_list' %}" class="btn btn-outline-primary mb-2 align-center">Назад</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

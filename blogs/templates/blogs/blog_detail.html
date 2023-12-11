@@ -1,0 +1,28 @@
+{% extends 'mailing/base.html' %}
+
+{% block title %}
+{{ object.title }}
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="cart-body">
+                <div class="card-body">
+                    <h3 class="card-title">{{ object.title }}</h3>
+                    <p class="card-text">{{ object.body }}</p>
+                </div>
+                <div class="card-footer">
+                    <div class=" mb-2"> Дата публикации: {{ object.date_of_creation }}</div>
+                    <div class=" mb-2"> Автор: {{ object.user }}</div>
+                    <div class=" mb-4"> Просмотры: {{ object.views_count }}</div>
+                    <a href="{% url 'blogs:list' %}" class="btn btn-outline-primary mb-2 align-center">Назад</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

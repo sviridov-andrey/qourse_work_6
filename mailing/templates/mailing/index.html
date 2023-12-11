@@ -1,0 +1,30 @@
+{% extends 'mailing/base.html' %}
+{% block content %}
+{% load my_tags %}
+
+<title>Главная</title>
+
+<main role="main" class="inner cover">
+    {% if user.is_authenticated %}
+    <h2 class="cover-heading">Главная</h2>
+    {% else %}
+    <h3 class="cover-heading">Войдите или зарегистрируйтесь</h3>
+    {% endif %}
+    <br>
+
+</main>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+    {% for object in objects_list %}
+    <div class="col-4">
+        <div class="card md-4 box-shadow">
+            <div class="card body">
+                {{ form.as_p }}
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    {% endfor%}
+</div>
+{% endblock %}

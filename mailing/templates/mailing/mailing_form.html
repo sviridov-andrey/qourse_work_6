@@ -1,0 +1,45 @@
+{% extends 'mailing/base.html' %}
+{% load my_tags %}
+
+{% block content %}
+<div class="col-12">
+    <form class="row" method="post" enctype="multipart/form-data">
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        {% if object %}
+                        <h3>Изменить рассылку</h3>
+                        {% else %}
+                        <h3>Добавить рассылку</h3>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.name.label_tag }}{{ form.name }}
+                    {{ form.body.label_tag }}{{ form.body }}
+                    {{ form.status.label_tag }}{{ form.status }}
+                    {{ form.time_start.label_tag }}{{ form.time_start }}
+                    {{ form.time_end.label_tag }}{{ form.time_end }}
+                    {{ form.periodicity.label_tag }}{{ form.periodicity }}
+                    {{ form.day.label_tag }}{{ form.day }}
+                    {{ form.day_week.label_tag }}{{ form.day_week }}
+                    <div class="mt-3">
+                        {{ form.clients.label_tag }}{{ form.clients }}
+                    </div>
+                    <div class="mt-5">
+                        {{ form.user.label_tag }}{{ form.user }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <p>
+            <button type="submit" class="btn btn-success">Сохранить</button>
+        </p>
+    </form>
+</div>
+<br>
+
+{% endblock %}
