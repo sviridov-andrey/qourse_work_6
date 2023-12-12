@@ -1,0 +1,88 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$inzQ0Rrjsu4s2XtuPWM2vB$yW8uke8qZ1+++BdPZZDH5TDe6og0ueAj77eh+cdsV/I=",
+    "last_login": "2023-12-11T18:02:10.198Z",
+    "is_superuser": true,
+    "first_name": "admin",
+    "last_name": "admin",
+    "is_staff": true,
+    "date_joined": "2023-12-11T17:56:25.197Z",
+    "email": "sicklynumb@yandex.ru",
+    "avatar": "",
+    "is_active": true,
+    "email_verified": false,
+    "ver_code": "100811993087",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$B3D273Pj3Njll5eBrKpp8t$YJjE9GNgQQeJl8HfHBy8St2jmLw8T71NtGWksLHoijk=",
+    "last_login": "2023-12-11T18:06:45.992Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "date_joined": "2023-12-11T18:00:22Z",
+    "email": "user1@mail.ru",
+    "avatar": "",
+    "is_active": true,
+    "email_verified": false,
+    "ver_code": "583574236034",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$mHG0TRs4jbKxL9BSrjfs39$Y8FDuqtM/Uv0vpAvKLjmfI59Q1WEdJffkczUXplDW8Y=",
+    "last_login": "2023-12-11T18:05:30.896Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "date_joined": "2023-12-11T18:00:50Z",
+    "email": "user2@mail.ru",
+    "avatar": "",
+    "is_active": true,
+    "email_verified": false,
+    "ver_code": "583574236034",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$6XR7rvzEDoHqMtRlYLCPNH$Bi6quINe/rcM9m4bCEvM1JkzfKZ24yRdh50feo/px/Q=",
+    "last_login": "2023-12-11T18:06:19.313Z",
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "date_joined": "2023-12-11T18:01:24Z",
+    "email": "manager1@mail.ru",
+    "avatar": "",
+    "is_active": true,
+    "email_verified": false,
+    "ver_code": "583574236034",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+}
+]

@@ -1,0 +1,42 @@
+[
+{
+  "model": "mailing.client",
+  "pk": 1,
+  "fields": {
+    "email": "client1@mail.ru",
+    "fio": "client1",
+    "comment": "client1client1",
+    "user": 2
+  }
+},
+{
+  "model": "mailing.client",
+  "pk": 2,
+  "fields": {
+    "email": "client2@mail.ru",
+    "fio": "client2",
+    "comment": "client2client2",
+    "user": 2
+  }
+},
+{
+  "model": "mailing.client",
+  "pk": 3,
+  "fields": {
+    "email": "client3@mail.ru",
+    "fio": "client3",
+    "comment": "client3client3",
+    "user": 3
+  }
+},
+{
+  "model": "mailing.client",
+  "pk": 4,
+  "fields": {
+    "email": "client4@mail.ru",
+    "fio": "client4",
+    "comment": "client4client4",
+    "user": 3
+  }
+}
+]
