@@ -5,7 +5,7 @@
   "fields": {
     "email": "client1@mail.ru",
     "fio": "client1",
-    "comment": "client1client1",
+    "comment": "client1client1\r\nclient1client1\r\nclient1client1",
     "user": 2
   }
 },
@@ -15,7 +15,7 @@
   "fields": {
     "email": "client2@mail.ru",
     "fio": "client2",
-    "comment": "client2client2",
+    "comment": "client2client2222222",
     "user": 2
   }
 },
@@ -37,6 +37,532 @@
     "fio": "client4",
     "comment": "client4client4",
     "user": 3
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 2,
+  "fields": {
+    "name": "рассылка 7",
+    "body": "раз в день",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "23:35:00",
+    "periodicity": "day",
+    "day": null,
+    "day_week": null,
+    "user": 2,
+    "is_active": false,
+    "clients": [
+      1
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 3,
+  "fields": {
+    "name": "рассылка 8",
+    "body": "раз в день",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "23:35:00",
+    "periodicity": "day",
+    "day": null,
+    "day_week": null,
+    "user": 2,
+    "is_active": false,
+    "clients": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 4,
+  "fields": {
+    "name": "рассылка 9",
+    "body": "раз в неделю",
+    "status": "running",
+    "time_start": "00:00:00",
+    "time_end": "23:35:00",
+    "periodicity": "week",
+    "day": null,
+    "day_week": "0",
+    "user": 2,
+    "is_active": true,
+    "clients": [
+      2
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 5,
+  "fields": {
+    "name": "рассылка 10",
+    "body": "раз в неделю",
+    "status": "running",
+    "time_start": "00:00:00",
+    "time_end": "23:35:00",
+    "periodicity": "week",
+    "day": null,
+    "day_week": "0",
+    "user": 2,
+    "is_active": true,
+    "clients": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 6,
+  "fields": {
+    "name": "рассылка 1",
+    "body": "–аз в день",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "02:00:00",
+    "periodicity": "day",
+    "day": null,
+    "day_week": null,
+    "user": 3,
+    "is_active": true,
+    "clients": [
+      3
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 7,
+  "fields": {
+    "name": "рассылка 2",
+    "body": "раз в день",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "02:00:00",
+    "periodicity": "day",
+    "day": null,
+    "day_week": null,
+    "user": 3,
+    "is_active": true,
+    "clients": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 8,
+  "fields": {
+    "name": "рассылка 3",
+    "body": "раз в неделю",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "02:00:00",
+    "periodicity": "week",
+    "day": null,
+    "day_week": null,
+    "user": 3,
+    "is_active": true,
+    "clients": [
+      4
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 9,
+  "fields": {
+    "name": "рассылка 4",
+    "body": "раз в неделю",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "02:00:00",
+    "periodicity": "week",
+    "day": null,
+    "day_week": null,
+    "user": 3,
+    "is_active": true,
+    "clients": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 10,
+  "fields": {
+    "name": "рассылка 5",
+    "body": "раз в мес€ц",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "02:00:00",
+    "periodicity": "mon",
+    "day": null,
+    "day_week": null,
+    "user": 3,
+    "is_active": true,
+    "clients": [
+      3
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 11,
+  "fields": {
+    "name": "рассылка 6",
+    "body": "раз в мес€ц",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "02:00:00",
+    "periodicity": "mon",
+    "day": null,
+    "day_week": null,
+    "user": 3,
+    "is_active": true,
+    "clients": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 12,
+  "fields": {
+    "name": "рассылка 11",
+    "body": "раз в мес€ц",
+    "status": "running",
+    "time_start": "00:00:00",
+    "time_end": "23:35:00",
+    "periodicity": "mon",
+    "day": 18,
+    "day_week": null,
+    "user": 2,
+    "is_active": true,
+    "clients": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 13,
+  "fields": {
+    "name": "рассылка 12",
+    "body": "раз в мес€ц",
+    "status": "running",
+    "time_start": "00:00:00",
+    "time_end": "23:35:00",
+    "periodicity": "mon",
+    "day": 18,
+    "day_week": null,
+    "user": 2,
+    "is_active": true,
+    "clients": [
+      1
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 15,
+  "fields": {
+    "name": "рассылка 1244",
+    "body": "раз в мес€ц",
+    "status": "running",
+    "time_start": "00:00:00",
+    "time_end": "02:00:00",
+    "periodicity": "mon",
+    "day": null,
+    "day_week": null,
+    "user": null,
+    "is_active": true,
+    "clients": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "mailing.mailing",
+  "pk": 16,
+  "fields": {
+    "name": "рассылка 12",
+    "body": "раз в мес€ц",
+    "status": "created",
+    "time_start": "00:00:00",
+    "time_end": "02:00:00",
+    "periodicity": "mon",
+    "day": null,
+    "day_week": null,
+    "user": null,
+    "is_active": true,
+    "clients": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 101,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.464Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client1@mail.ru",
+    "mailing_current": 12,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 102,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.758Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client1@mail.ru",
+    "mailing_current": 13,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 103,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.773Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client2@mail.ru",
+    "mailing_current": 13,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 104,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.789Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client2@mail.ru",
+    "mailing_current": 4,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 105,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.799Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client1@mail.ru",
+    "mailing_current": 5,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 106,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.824Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client2@mail.ru",
+    "mailing_current": 5,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 107,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.835Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client3@mail.ru",
+    "mailing_current": 6,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 108,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.849Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client3@mail.ru",
+    "mailing_current": 7,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 109,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.859Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client4@mail.ru",
+    "mailing_current": 7,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 110,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.882Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client4@mail.ru",
+    "mailing_current": 8,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 111,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.890Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client3@mail.ru",
+    "mailing_current": 9,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 112,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.898Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client4@mail.ru",
+    "mailing_current": 9,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 113,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.919Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client3@mail.ru",
+    "mailing_current": 10,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 114,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.939Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client3@mail.ru",
+    "mailing_current": 11,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 115,
+  "fields": {
+    "time_try": "2023-12-17T22:09:55.954Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client4@mail.ru",
+    "mailing_current": 11,
+    "user": 3
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 116,
+  "fields": {
+    "time_try": "2023-12-18T22:30:51.836Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client2@mail.ru",
+    "mailing_current": 12,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 117,
+  "fields": {
+    "time_try": "2023-12-18T22:30:51.930Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client1@mail.ru",
+    "mailing_current": 12,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 118,
+  "fields": {
+    "time_try": "2023-12-18T22:30:51.930Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client1@mail.ru",
+    "mailing_current": 13,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 119,
+  "fields": {
+    "time_try": "2023-12-18T22:30:51.946Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client2@mail.ru",
+    "mailing_current": 4,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 120,
+  "fields": {
+    "time_try": "2023-12-18T22:30:51.946Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client2@mail.ru",
+    "mailing_current": 5,
+    "user": 2
+  }
+},
+{
+  "model": "mailing.mailinglog",
+  "pk": 121,
+  "fields": {
+    "time_try": "2023-12-18T22:30:51.962Z",
+    "status": "”спешно",
+    "server_response": null,
+    "client": "client1@mail.ru",
+    "mailing_current": 5,
+    "user": 2
   }
 }
 ]

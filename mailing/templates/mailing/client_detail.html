@@ -9,9 +9,10 @@
             <div class="cart-body">
                 <div class="card-body">
                     <h3 class="card-title"> клиент: {{ object.fio }}</h3>
+                    <div class=" mb-6"> почта: {{ object.email }}</div>
+                    <div class=" mb-6"> комментарий: {{ object.comment }}</div>
                 </div>
                 <div class="card-footer">
-                    <div class=" mb-2"> почта: {{ object.email }}</div>
                     <a href="{% url 'mailing:client_list' %}" class="btn btn-outline-primary mb-2 align-center">Назад</a>
                 </div>
             </div>

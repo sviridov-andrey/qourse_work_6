@@ -18,3 +18,8 @@ def user_groups():
 @register.simple_tag()
 def day():
     return 'day'
+
+
+@register.filter()
+def mediapath(image_path):
+    return f'/media/{image_path}'

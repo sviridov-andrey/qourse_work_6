@@ -1,8 +1,5 @@
 from datetime import datetime
-
 from django.db import models
-from django.forms import TimeInput
-
 from config import settings
 from mailing.utils import NULLABLE
 
@@ -46,42 +43,46 @@ class Mailing(models.Model):
     body = models.TextField(verbose_name='тело письма')
     status = models.CharField(max_length=10, choices=CHOICES_STATUS, verbose_name='статус', default='created')
     time_start = models.TimeField(verbose_name='начало времени отправки',
-                                  help_text='Введите время в формате ЧЧ:ММ через знак :')
+                                  help_text='Введите время в формате ЧЧ:ММ через двоеточие. Начало времени отправки '
+                                            'быть раньше окончания времени отправки ')
     time_end = models.TimeField(verbose_name='окончание времени отправки',
-                                help_text='Введите время в формате ЧЧ:ММ через знак :')
+                                help_text='Введите время в формате ЧЧ:ММ через  двоеточие. Начало времени отправки '
+                                            'быть раньше окончания времени отправки ')
     periodicity = models.CharField(max_length=20, choices=CHOICES_TIME, verbose_name='периодичность')
     day = models.IntegerField(verbose_name='день', **NULLABLE,
-                              help_text='Введите число при периодичности раз в месяц')
+                              help_text='Введите число при периодичности раз в месяц. Число должно быть от 1 до 31')
     day_week = models.CharField(max_length=15, choices=CHOICES_DAYWEEK, verbose_name='день недели', **NULLABLE,
                                 help_text='Выберите день недели при периодичности раз в неделю')
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='пользователь')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='пользователь', **NULLABLE)
     is_active = models.BooleanField(default=True, verbose_name='активность рассылки')
     clients = models.ManyToManyField("Client", related_name='clients', verbose_name='клиенты')
 
     def __str__(self):
-        return f'{self.name}, {self.body}, {self.periodicity}'
+        return f'{self.name}, {self.body}'
 
     class Meta:
         verbose_name = 'письмо'
         verbose_name_plural = 'письма'
+        ordering = ['name', ]
 
 
 class MailingLog(models.Model):
     STATUS_CHOICES = (
-        (1, 'Успешно'),
-        (0, 'Неуспешно'),
+        ('1', 'Успешно'),
+        ('0', 'Неуспешно'),
     )
 
     time_try = models.DateTimeField(default=datetime.now, verbose_name='дата и время попытки')
-    status = models.IntegerField(choices=STATUS_CHOICES, verbose_name='статус попытки')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, verbose_name='статус попытки')
     server_response = models.TextField(verbose_name='ответ почтового сервера', **NULLABLE)
-    client = models.ManyToManyField(Client, verbose_name='клиент')
-    mailing_list = models.ForeignKey(Mailing, on_delete=models.CASCADE, verbose_name='рассылка')
+    client = models.CharField(max_length=150, verbose_name='клиент', **NULLABLE)
+    mailing_current = models.ForeignKey(Mailing, on_delete=models.CASCADE, verbose_name='рассылка')
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='пользователь')
 
     def __str__(self):
-        return f'Лог: "{self.mailing_list}"'
+        return f'Лог: "{self.mailing_current}"'
 
     class Meta:
         verbose_name = 'Лог'
         verbose_name_plural = 'Логи'
+        ordering = ['-time_try', ]

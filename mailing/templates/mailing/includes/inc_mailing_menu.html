@@ -18,6 +18,7 @@
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'mailing:index' %}" class="nav-link px-2">Главная</a></li>
                 <li><a href="{% url 'mailing:mailing_list' %}" class="nav-link px-2">Рассылки</a></li>
+                <li><a href="{% url 'mailing:mailing_log_list' %}" class="nav-link px-2">Логи рассылок</a></li>
                 <li><a href="{% url 'blogs:list' %}" class="nav-link px-2">Блоги</a></li>
 
                 {% if user.groups.all.0 == user_group %}
@@ -46,14 +47,7 @@
                         <use xlink:href="#bootstrap"/>
                     </svg>
                 </a>
-                {% if user.is_authenticated %}
             </div>
-            <ul class="nav col-12 col-md-left  justify-content-left ">
-                <li><a class="nav-link px-2">Всего рассылок: </a></li>
-                <li><a class="nav-link px-4">Активных рассылок: </a></li>
-                <li><a class="nav-link px-3">Клиентов в базе: </a></li>
-                {% endif %}
-            </ul>
         </header>
     </div>
 

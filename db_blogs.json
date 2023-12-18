@@ -1,2 +1,98 @@
 [
+{
+  "model": "blogs.blog",
+  "pk": 7,
+  "fields": {
+    "title": "блог 1",
+    "body": "блог 1\r\nблог 1\r\nблог 1",
+    "image": "",
+    "date_of_creation": "2023-12-14",
+    "views_count": 7,
+    "user": 2
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 8,
+  "fields": {
+    "title": "блог 2",
+    "body": "блог 2\r\nблог 2\r\nблог 2",
+    "image": "",
+    "date_of_creation": "2023-12-14",
+    "views_count": 2,
+    "user": 2
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 9,
+  "fields": {
+    "title": "блог 3",
+    "body": "блог 3\r\nблог 3\r\nблог 3",
+    "image": "",
+    "date_of_creation": "2023-12-14",
+    "views_count": 2,
+    "user": 2
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 10,
+  "fields": {
+    "title": "блог 4",
+    "body": "блог 4\r\nблог 4\r\nблог 4",
+    "image": "",
+    "date_of_creation": "2023-12-14",
+    "views_count": 1,
+    "user": 2
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 11,
+  "fields": {
+    "title": "блог 5",
+    "body": "блог 5\r\nблог 5\r\nблог 5",
+    "image": "",
+    "date_of_creation": "2023-12-14",
+    "views_count": 1,
+    "user": 3
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 12,
+  "fields": {
+    "title": "блог 6",
+    "body": "блог 6\r\nблог 6\r\nблог 6",
+    "image": "",
+    "date_of_creation": "2023-12-14",
+    "views_count": 2,
+    "user": 3
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 13,
+  "fields": {
+    "title": "блог 7",
+    "body": "блог 7 блог 7 блог 7",
+    "image": "",
+    "date_of_creation": "2023-12-14",
+    "views_count": 1,
+    "user": 3
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 14,
+  "fields": {
+    "title": "блог 8",
+    "body": "блог 8 блог 8 блог 8",
+    "image": "",
+    "date_of_creation": "2023-12-14",
+    "views_count": 0,
+    "user": 3
+  }
+}
 ]

@@ -4,27 +4,17 @@
 
 <title>Главная</title>
 
+<ul class="nav col-12 col-md-left  justify-content-left ">
+    <li><a class="nav-link px-2">Всего рассылок: {{ mailings_count }}</a></li>
+    <li><a class="nav-link px-4">Активных рассылок: {{ mailings_is_active_count }}</a></li>
+    <li><a class="nav-link px-3">Уникальных клиентов в базе: {{ unique_clients_count }}</a></li>
+
+</ul>
+
 <main role="main" class="inner cover">
-    {% if user.is_authenticated %}
     <h2 class="cover-heading">Главная</h2>
-    {% else %}
-    <h3 class="cover-heading">Войдите или зарегистрируйтесь</h3>
-    {% endif %}
-    <br>
-
 </main>
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<br>
+{% include 'blogs/blog_include.html' %}
 
-    {% for object in objects_list %}
-    <div class="col-4">
-        <div class="card md-4 box-shadow">
-            <div class="card body">
-                {{ form.as_p }}
-            </div>
-        </div>
-        <br>
-    </div>
-    <br>
-    {% endfor%}
-</div>
 {% endblock %}
